@@ -9,7 +9,20 @@
 
     
     1. 기획서 제출 ✅
+    2. 로그인 화면 구현 ✅
     
 
 </div>
 </details>
+<details>
+<summary>2022.08.21</summary>
+<div markdown="1">
+
+
+    
+    1. 홈 화면 구현 중 🔥
+    
+
+</div>
+</details>
+
