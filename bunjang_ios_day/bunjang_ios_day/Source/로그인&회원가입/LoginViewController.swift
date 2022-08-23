@@ -12,10 +12,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var imageSlidesShow: ImageSlideshow!
     let imageInputs = [
-        ImageSource(image: UIImage(named: "로그인1")!),
-        ImageSource(image: UIImage(named: "로그인2")!),
-        ImageSource(image: UIImage(named: "로그인3")!),
-        ImageSource(image: UIImage(named: "로그인4")!)
+        ImageSource(image: Image.login1),
+        ImageSource(image: Image.login2),
+        ImageSource(image: Image.login3),
+        ImageSource(image: Image.login4)
     ]
     
     
