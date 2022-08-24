@@ -1,30 +1,30 @@
 PODS:
+  - Alamofire (5.6.2)
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
   - Pageboy (3.6.2)
   - Tabman (2.12.0):
     - Pageboy (~> 3.6.0)
-  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - ImageSlideshow (~> 1.9.0)
   - Tabman (~> 2.11)
-  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - ImageSlideshow
     - Pageboy
     - Tabman
-    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
-  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: b594f28c73be682846f9be4e9522a076778004eb
+PODFILE CHECKSUM: 6a7b01412fcbcd398cabcbbca6eea828e5bce868
 
 COCOAPODS: 1.11.3
