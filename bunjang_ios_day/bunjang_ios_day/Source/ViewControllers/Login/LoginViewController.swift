@@ -18,10 +18,15 @@ class LoginViewController: UIViewController {
         ImageSource(image: Image.login4)
     ]
     
-    
     @IBAction func tapOtherLoginButton(_ sender: UIButton) {
         presentReviewModalViewController()
     }
+    
+    @IBAction func tapLoginButton(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RealLoginViewController") as! RealLoginViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,11 +73,10 @@ extension LoginViewController: UIViewControllerTransitioningDelegate {
         return HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
-extension LoginViewController: DismissDelegate {
-    //다른 방법으로 로그인 시 호출 됨
-    func dismiss() {
-        self.dismiss(animated: true) {
-            print("로그인 뷰 디스미스")
-        }
-    }
-}
+//extension LoginViewController: DismissDelegate {
+//    func dismiss() {
+//        self.dismiss(animated: true) {
+//            print("로그인 뷰 디스미스")
+//        }
+//    }
+//}

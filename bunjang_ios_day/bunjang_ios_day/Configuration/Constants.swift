@@ -8,4 +8,5 @@
 import UIKit
 
 struct Constant {
+    static public var categoryName = "카테고리"
 }

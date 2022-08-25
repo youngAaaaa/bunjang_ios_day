@@ -16,10 +16,10 @@ struct SignUpResponse: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
-    let storeID: Int
-
-    enum CodingKeys: String, CodingKey {
-        case storeID = "storeId"
-    }
-}
+//struct Result: Codable {
+//    let storeID: Int
+//
+//    enum CodingKeys: String, CodingKey {
+//        case storeID = "storeId"
+//    }
+//}

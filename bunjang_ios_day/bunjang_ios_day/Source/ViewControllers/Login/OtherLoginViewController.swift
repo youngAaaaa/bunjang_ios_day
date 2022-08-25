@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol DismissDelegate {
-    func dismiss()
-}
+//protocol DismissDelegate {
+//    func dismiss()
+//}
 
 class OtherLoginViewController: UIViewController {
     
-    var dismissDelegate: DismissDelegate?
+    //var dismissDelegate: DismissDelegate?
     
     @IBAction func tapSignUpButton(_ sender: UIButton) {
         print("눌러짐")

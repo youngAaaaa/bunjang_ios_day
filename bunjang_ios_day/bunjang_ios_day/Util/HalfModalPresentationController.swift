@@ -34,7 +34,6 @@ class HalfModalPresentationController: UIPresentationController {
                             height: self.containerView!.frame.height * proportionalHeight))
     }
     
-    // 모달이 올라갈 때 뒤에 있는 배경을 검은색 처리해주는 용도
     override func presentationTransitionWillBegin() {
         self.blurEffectView.alpha = 0
         self.containerView!.addSubview(blurEffectView)
@@ -44,14 +43,12 @@ class HalfModalPresentationController: UIPresentationController {
     }
     
     
-    
-    // 모달이 없어질 때 검은색 배경을 슈퍼뷰에서 제거
     override func dismissalTransitionWillBegin() {
         self.presentedViewController.transitionCoordinator?.animate(alongsideTransition: { _ in self.blurEffectView.alpha = 0},
                                                                     completion: { _ in self.blurEffectView.removeFromSuperview()})
     }
     
-    // 모달의 크기가 조절됐을 때 호출되는 함수
+    
     override func containerViewDidLayoutSubviews() {
         super.containerViewDidLayoutSubviews()
         blurEffectView.frame = containerView!.bounds
@@ -61,8 +58,6 @@ class HalfModalPresentationController: UIPresentationController {
         self.presentedView?.layer.cornerRadius = 20
         self.presentedView!.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMaxXMinYCorner, .layerMinXMinYCorner)
     }
-    
-    
     
     @objc func dismissController() {
         self.presentedViewController.dismiss(animated: true, completion: nil)
