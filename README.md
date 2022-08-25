@@ -9,7 +9,7 @@
 
     
     1. 기획서 제출 ✅
-    2. 로그인 화면 구현 ✅
+    2. 소셜 로그인 화면 구현 ✅
     
 
 </div>
@@ -49,6 +49,33 @@
     2. 전체 메뉴 구현 ✅
     
     * 피드백 : UI 구현은 잘 함, but 지금은 api등 주요 기능에 우선 순위를 두는 게 먼저
+    
+
+</div>
+</details>
+</details>
+<details>
+<summary>2022.08.24</summary>
+<div markdown="1">
+
+
+    
+    1. 회원가입 화면 ✅
+    2. 회원가입 api ✅
+    
+
+</div>
+</details>
+<details>
+<summary>2022.08.25</summary>
+<div markdown="1">
+
+
+    
+    1. 로그인 화면 ✅
+    2. 로그인 api ✅
+    3. 상품등록 화면 구현 중 🔥
+    3. 카테고리 depth(1, 2, 3) api  ✅
     
 
 </div>
