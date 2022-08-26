@@ -10,5 +10,6 @@ target 'bunjang_ios_day' do
   pod 'ImageSlideshow', '~> 1.9.0'
   pod 'Tabman', '~> 2.11'
   pod 'Alamofire'
+  pod 'FirebaseStorage'
 
 end

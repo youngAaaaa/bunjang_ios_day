@@ -14,5 +14,7 @@ public enum URLs {
     public static let categoryURL = "/bungae/product/category"
     public static let depth2URL = "/bungae/product/category/{:depth1Id}"
     public static let depth3URL = "/bungae/product/category/{:depth1Id}/{:depth2Id}"
+    public static let registrationURL = "/bungae/product/registration"
+    
     
 }

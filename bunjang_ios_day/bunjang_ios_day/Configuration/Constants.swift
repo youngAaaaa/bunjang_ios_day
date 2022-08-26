@@ -8,5 +8,12 @@
 import UIKit
 
 struct Constant {
-    static public var categoryName = "카테고리"
+    static public var isUserLogged = false
+    
+    static public var storeID: Int?
+    static public var jwt: String?
+    
+    static public var category1: Int?
+    static public var category2: Int?
+    static public var category3: Int?
 }

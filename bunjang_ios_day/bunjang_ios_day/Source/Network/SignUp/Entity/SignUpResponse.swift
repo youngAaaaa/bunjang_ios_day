@@ -12,14 +12,10 @@ struct SignUpResponse: Codable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: Result
+    let result: Result?
 }
 
 // MARK: - Result
 //struct Result: Codable {
-//    let storeID: Int
-//
-//    enum CodingKeys: String, CodingKey {
-//        case storeID = "storeId"
-//    }
+//    let storeId: Int
 //}

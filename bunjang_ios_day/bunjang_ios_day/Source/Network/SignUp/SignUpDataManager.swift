@@ -16,6 +16,7 @@ final class SignUpDataManager {
         print("url : \(url)")
         print("parameters :\(parameters)")
         
+        
         AF.request(url,
                    method: .post,
                    parameters: parameters,
@@ -31,16 +32,16 @@ final class SignUpDataManager {
                     //let vc = storyboard.instantiateViewController(withIdentifier: "RootViewController")
                     
                     // 토큰값 유저디폴트에 저장
-//                    UserDefaults.standard.set(response.result?.loginId, forKey: "userID")
-//                    UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
-//
-//                    Constant.isUserLogged = true
-//                    Constant.jwt = response.result?.jwt
-//                    Constant.loginID = ConfirmLastViewController.receiveId
-//
-//                    print("로그인 아이디 : \(ConfirmLastViewController.receiveId!)")
-//
-//                    delegate.changeRootViewController(vc)
+                    //                    UserDefaults.standard.set(response.result?.loginId, forKey: "userID")
+                    //                    UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
+                    //
+                    //                    Constant.isUserLogged = true
+                    //                    Constant.jwt = response.result?.jwt
+                    //                    Constant.loginID = ConfirmLastViewController.receiveId
+                    //
+                    //                    print("로그인 아이디 : \(ConfirmLastViewController.receiveId!)")
+                    //
+                    //                    delegate.changeRootViewController(vc)
                 }
                 else{
                     switch response.code {
@@ -55,9 +56,27 @@ final class SignUpDataManager {
                 }
                 // 네트워킹 실패
             case .failure(let error):
+                do{
+                    let result = try JSONDecoder().decode(SignUpResponse.self, from: response.data!)
+                    print("실패 result : \(result)")
+                    
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    print("error: ", error)
+                }
                 print(error.localizedDescription)
+                
             }
-            
         }
     }
 }

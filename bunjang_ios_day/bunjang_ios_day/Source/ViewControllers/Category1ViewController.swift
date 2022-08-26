@@ -49,10 +49,14 @@ extension Category1ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
         print(item[indexPath.row].depth1ID)
+        let categoryName = item[indexPath.row].name
         if item[indexPath.row].hasMoreDepth{
-            let categoryName = item[indexPath.row].name
+            
             let depth = item[indexPath.row].depth1ID
             Category2DataManager().getCategory(depth, categoryName, delegate: self)
+        } else {
+            Constant.category1 = item[indexPath.row].depth1ID
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 

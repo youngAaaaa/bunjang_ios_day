@@ -17,11 +17,6 @@ struct SignInResponse: Codable {
 
 // MARK: - Result
 struct Result: Codable {
-    let storeID: Int
-    let jwt: String
-
-    enum CodingKeys: String, CodingKey {
-        case storeID = "storeId"
-        case jwt
-    }
+    let storeId: Int?
+    let jwt: String?
 }

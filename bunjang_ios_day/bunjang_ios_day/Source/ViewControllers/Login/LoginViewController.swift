@@ -27,7 +27,6 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

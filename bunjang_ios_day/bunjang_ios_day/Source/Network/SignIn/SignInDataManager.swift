@@ -29,18 +29,18 @@ final class SignInDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("로그인 성공")
-//                    guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
-//                        return
-//                    }
-//                    // 토큰값 유저디폴트에 저장
-//                    UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
-//                    UserDefaults.standard.set(response.result?.loginId, forKey: "userID")
-//
-//                    Constant.isUserLogged = true
-//                    Constant.jwt = response.result?.jwt
-//                    Constant.loginID = response.result?.loginId
-//
-//                    delegate.changeRootViewController(rootVC)
+                    guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
+                        return
+                    }
+                    // 토큰값 유저디폴트에 저장
+                    UserDefaults.standard.set(response.result.jwt, forKey: "jwt")
+                    UserDefaults.standard.set(response.result.storeId, forKey: "storeId")
+
+                    Constant.isUserLogged = true
+                    Constant.jwt = response.result.jwt
+                    Constant.storeID = response.result.storeId
+
+                    delegate.changeRootViewController(rootVC)
                 }
                 else{
                     switch response.code {

@@ -7,13 +7,7 @@
 
 import UIKit
 
-protocol CategoryDelegate: AnyObject {
-    func chagedCategory(category1: String?, category2: String?, category3: String?)
-}
-
 class Category3ViewController: UIViewController {
-    
-    weak var delegate: CategoryDelegate?
     
     var item: [Category3] = []
     var category1Name = ""
@@ -59,15 +53,9 @@ extension Category3ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let category3Name = item[indexPath.row].name
-        let categoryText = "\(category1Name) 🐣\(category2Name) 🐬\(category3Name)"
-        Constant.categoryName = categoryText
-        print(categoryText)
-        print(Constant.categoryName)
-        
         if !item[indexPath.row].hasMoreDepth{
-            
-            self.delegate?.chagedCategory(category1: category1Name, category2: category2Name, category3: category3Name)
+            //let category3Name = item[indexPath.row].name
+            Constant.category3 = item[indexPath.row].depth3ID
             self.navigationController?.popToRootViewController(animated: true)
         }
         
