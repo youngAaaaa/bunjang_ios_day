@@ -29,6 +29,7 @@ final class SignInDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("로그인 성공")
+                    print(response)
                     guard let rootVC = delegate.storyboard?.instantiateViewController(withIdentifier: "RootViewController") as? UITabBarController else {
                         return
                     }

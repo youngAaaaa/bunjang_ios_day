@@ -11,14 +11,19 @@ import Photos
 class SellProductViewController: UIViewController {
     
     var selectedImage = [UIImage?]()
+    var selectedImageNum: Int?
+    var imageURLs = [String]()
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var categoryText: UILabel!
     @IBOutlet weak var categoryText2: UILabel!
     @IBOutlet weak var categoryText3: UILabel!
     
+    
+    // MARK: 텍스트필드
     @IBOutlet weak var priceTF: UITextField!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var nameTF: UITextField!
     
     
     @IBAction func tapBackButton(_ sender: Any) {
@@ -67,6 +72,8 @@ class SellProductViewController: UIViewController {
     
     func presentGallaryViewController() {
         DispatchQueue.main.async {
+            self.imageURLs.removeAll()
+            
             let gallaryViewController = GallaryViewController()
             gallaryViewController.modalPresentationStyle = .overFullScreen
             gallaryViewController.delegate = self
@@ -79,36 +86,46 @@ class SellProductViewController: UIViewController {
         Constant.category1 = nil
         Constant.category2 = nil
         Constant.category3 = nil
+        
+        Constant.category1Name = nil
+        Constant.category2Name = nil
+        Constant.category3Name = nil
     }
     
     let ms = Date.currentTimeInMilli()
     @IBAction func tapDoneButton(_ sender: UIButton) {
-//        for i in selectedImage{
-//
-//            FirebaseStorageManager.uploadImage(image: i!,
-//                                               pathRoot: "day/\(Constant.loginID ?? "")/day_\(ms).jpg"){ [self] url in
-//                let urlString = url!.absoluteString
-//                let request = RegistrationRequest(name: <#T##String#>,
-//                                                  content: <#T##String#>,
-//                                                  imageUrls: <#T##[String]#>,
-//                                                  categoryDepth1ID: <#T##Int#>,
-//                                                  categoryDepth2ID: <#T##Int#>,
-//                                                  categoryDepth3ID: <#T##Int#>,
-//                                                  tags: <#T##[String]#>,
-//                                                  price: <#T##Int#>,
-//                                                  deliveryFree: <#T##Bool#>,
-//                                                  quantity: <#T##Int#>,
-//                                                  condition: <#T##String#>,
-//                                                  change: <#T##Bool#>,
-//                                                  location: <#T##String#>)
-//        RegistrationDataManager().postProduct(request, delegate: self)
-//            }
-//        }
+        
+        for i in 0..<selectedImageNum! {
+            
+            FirebaseStorageManager.uploadImage(image: selectedImage[i]!,
+                                               pathRoot: "\(Constant.storeID ?? 0)/\(i)_day_\(ms).jpg"){ [self] url in
+                let urlString = url!.absoluteString
+                imageURLs.append(urlString)
+                print("‼️‼️‼️imageURLs : \(imageURLs)‼️‼️‼️")
+                
+                if imageURLs.count == selectedImageNum!{
+                    let request = RegistrationRequest(name: nameTF.text!,
+                                                      content: textView.text!,
+                                                      imageUrls: imageURLs,
+                                                      categoryDepth1ID: Constant.category1,
+                                                      categoryDepth2ID: Constant.category2,
+                                                      categoryDepth3ID: Constant.category3,
+                                                      tags: [Constant.category1Name, Constant.category2Name, Constant.category3Name],
+                                                      price: Int(priceTF.text!)!,
+                                                      deliveryFree: true,
+                                                      quantity: 1,
+                                                      condition: "중고상품",
+                                                      change: false,
+                                                      location: "북구 화명1동")
+                    RegistrationDataManager().postProduct(request, delegate: self)
+                }
+            }
+        }
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         categoryText2.text = ""
         categoryText3.text = ""
         
@@ -118,7 +135,6 @@ class SellProductViewController: UIViewController {
     }
     
 }
-
 extension SellProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(#function)
@@ -136,5 +152,7 @@ extension SellProductViewController: SelectedImagesDelegate {
         print("사진 들어옴")
         selectedImage = images
         print("selectedImage : \(selectedImage)")
+        print("number : \(number)")
+        selectedImageNum = number
     }
 }

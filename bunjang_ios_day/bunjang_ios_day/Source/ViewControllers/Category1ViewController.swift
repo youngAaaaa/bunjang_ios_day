@@ -47,15 +47,20 @@ extension Category1ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        print(item[indexPath.row].depth1ID)
         let categoryName = item[indexPath.row].name
+        let depth = item[indexPath.row].depth1ID
+        
+        Constant.category1Name = categoryName
+        Constant.category1 = depth
+        
+        print("💜Category1ViewController💜")
+        print("💞Constant.category1Name : \(Constant.category1Name)💞")
+        print("💞Constant.category1 : \(Constant.category1)💞")
+        
         if item[indexPath.row].hasMoreDepth{
             
-            let depth = item[indexPath.row].depth1ID
             Category2DataManager().getCategory(depth, categoryName, delegate: self)
         } else {
-            Constant.category1 = item[indexPath.row].depth1ID
             self.navigationController?.popToRootViewController(animated: true)
         }
     }

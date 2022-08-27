@@ -28,6 +28,7 @@ final class SignUpDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("회원가입 성공")
+                    print(response)
                     //let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     //let vc = storyboard.instantiateViewController(withIdentifier: "RootViewController")
                     

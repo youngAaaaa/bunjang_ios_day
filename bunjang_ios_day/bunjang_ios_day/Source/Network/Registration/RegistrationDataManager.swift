@@ -15,20 +15,27 @@ final class RegistrationDataManager {
         
         let url = URLs.baseURL+URLs.registrationURL
         
-        print("url : \(url)")
-        print("parameters :\(parameters)")
+        print("🧡url : \(url)")
+        print("🧡parameters :\(parameters)🧡")
+        
+        let header: HTTPHeaders = [
+            "X-ACCESS-TOKEN": Constant.jwt!
+        ]
+        
+        print("🧡header :\(header)🧡")
         
         AF.request(url,
                    method: .post,
                    parameters: parameters,
                    encoder: JSONParameterEncoder(),
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: RegistrationResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
                     print("상품 등록 성공")
+                    print("🔥response.result : \(response.result)")
                     
                 }
                 else{
@@ -77,6 +84,23 @@ final class RegistrationDataManager {
                     }
                 }
             case .failure(let error):
+                do{
+                    let result = try JSONDecoder().decode(RegistrationResponse.self, from: response.data!)
+                    
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    print("error: ", error)
+                }
                 print(error.localizedDescription)
             }
             

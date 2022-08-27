@@ -12,13 +12,13 @@ struct RegistrationResponse: Codable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: RegistrationResult
+    let result: RegistrationResult?
 }
 
 // MARK: - Result
 struct RegistrationResult: Codable {
-    let productID: Int
-    let name: String
+    let productID: Int?
+    let name: String?
 
     enum CodingKeys: String, CodingKey {
         case productID = "productId"

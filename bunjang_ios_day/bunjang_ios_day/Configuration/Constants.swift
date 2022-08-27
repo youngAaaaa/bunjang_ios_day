@@ -16,4 +16,8 @@ struct Constant {
     static public var category1: Int?
     static public var category2: Int?
     static public var category3: Int?
+    
+    static public var category1Name: String?
+    static public var category2Name: String?
+    static public var category3Name: String?
 }

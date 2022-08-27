@@ -22,6 +22,7 @@ class GallaryViewController: UIViewController {
     
     var photosIndex = [Int](repeating: 0, count: 50)
     var photos = [UIImage?](repeating: nil, count: 50)
+    var uploadImage = [UIImage]()
     
     
     init() {
@@ -69,7 +70,14 @@ class GallaryViewController: UIViewController {
     }
     
     @IBAction func tapDoneButton(_ sender: Any) {
-        delegate?.sendImages(images: photos, number: num)
+        
+        for i in photos {
+            if i != nil{
+                uploadImage.append(i!)
+            }
+        }
+        
+        delegate?.sendImages(images: uploadImage, number: num)
         dismiss(animated: true)
     }
     

@@ -54,8 +54,14 @@ extension Category3ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if !item[indexPath.row].hasMoreDepth{
-            //let category3Name = item[indexPath.row].name
+            let category3Name = item[indexPath.row].name
             Constant.category3 = item[indexPath.row].depth3ID
+            Constant.category3Name = category3Name
+            
+            print("💜Category3ViewController💜")
+            print("💞Constant.category3Name : \(Constant.category3Name)💞")
+            print("💞Constant.category3 : \(Constant.category3)💞")
+            
             self.navigationController?.popToRootViewController(animated: true)
         }
         
