@@ -80,4 +80,29 @@
 
 </div>
 </details>
+<details>
+<summary>2022.08.26</summary>
+<div markdown="1">
+
+
+    
+    1. 상품등록 화면 구현 ✅
+    2. 사진 선택 화면 구현 ✅
+    3. 사진 저장을 위한 firebase 연동 중 ❤️‍🔥
+    
+
+</div>
+</details>
+<details>
+<summary>2022.08.27</summary>
+<div markdown="1">
+
+
+    
+    1. 사진 저장을 위한 firebase 연동 ✅
+    2. 게시물 등록 api ❤️‍🔥
+    
+
+</div>
+</details>
 
