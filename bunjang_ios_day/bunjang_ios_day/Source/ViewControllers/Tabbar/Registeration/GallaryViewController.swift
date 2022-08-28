@@ -20,8 +20,8 @@ class GallaryViewController: UIViewController {
     var tmpImg: UICollectionViewCell?
     var asset: PHFetchResult<PHAsset>
     
-    var photosIndex = [Int](repeating: 0, count: 50)
-    var photos = [UIImage?](repeating: nil, count: 50)
+    var photosIndex = [Int](repeating: 0, count: 20)
+    var photos = [UIImage?](repeating: nil, count: 20)
     var uploadImage = [UIImage]()
     
     

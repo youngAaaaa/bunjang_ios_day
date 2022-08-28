@@ -14,7 +14,7 @@ struct RegistrationRequest: Codable {
     let categoryDepth1ID, categoryDepth2ID, categoryDepth3ID: Int?
     let tags: [String?]
     let price: Int
-    let deliveryFree: Bool
+    let deliveryFee: Bool
     let quantity: Int
     let condition: String
     let change: Bool
@@ -25,6 +25,6 @@ struct RegistrationRequest: Codable {
         case categoryDepth1ID = "categoryDepth1Id"
         case categoryDepth2ID = "categoryDepth2Id"
         case categoryDepth3ID = "categoryDepth3Id"
-        case tags, price, deliveryFree, quantity, condition, change, location
+        case tags, price, deliveryFee, quantity, condition, change, location
     }
 }
