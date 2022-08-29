@@ -29,6 +29,14 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func tapBackButton(_ sender: UIButton) {
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        
+        self.changeRootViewController(vc)
+    }
+    
+    
     @IBAction func phoneTFChange(_ sender: UITextField) {
         checkMaxLength(textField: phoneTF, maxLength: 11)
     }

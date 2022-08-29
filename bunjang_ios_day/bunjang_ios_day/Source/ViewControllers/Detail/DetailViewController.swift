@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.contentInsetAdjustmentBehavior = .never
         
         collectionView.register(UINib(nibName: "ProductSection1CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductSection1CollectionViewCell")
         collectionView.register(UINib(nibName: "ProductSection2CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductSection2CollectionViewCell")

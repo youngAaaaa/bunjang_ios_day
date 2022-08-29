@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ftn-xc-pn1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GpN-ai-rhK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -156,7 +156,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAO-mq-uTw">
-                                        <rect key="frame" x="20" y="20" width="47.5" height="44"/>
+                                        <rect key="frame" x="10" y="20" width="47.5" height="44"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
@@ -178,7 +178,7 @@
                                     <constraint firstAttribute="trailing" secondItem="ya1-1C-p80" secondAttribute="trailing" constant="30" id="WFT-yX-wnd"/>
                                     <constraint firstAttribute="trailing" secondItem="5qt-5g-6MD" secondAttribute="trailing" constant="30" id="aio-oM-ak6"/>
                                     <constraint firstItem="64o-Zg-Pss" firstAttribute="top" secondItem="Exz-QT-r9C" secondAttribute="bottom" constant="50" id="bIO-us-1WL"/>
-                                    <constraint firstItem="pAO-mq-uTw" firstAttribute="leading" secondItem="CWB-Ow-75W" secondAttribute="leading" constant="20" id="bT1-He-wCS"/>
+                                    <constraint firstItem="pAO-mq-uTw" firstAttribute="leading" secondItem="CWB-Ow-75W" secondAttribute="leading" constant="10" id="bT1-He-wCS"/>
                                     <constraint firstItem="ya1-1C-p80" firstAttribute="leading" secondItem="CWB-Ow-75W" secondAttribute="leading" constant="30" id="ire-zR-fnw"/>
                                     <constraint firstItem="pAO-mq-uTw" firstAttribute="top" secondItem="CWB-Ow-75W" secondAttribute="top" constant="20" id="vCc-N6-sbi"/>
                                     <constraint firstItem="5qt-5g-6MD" firstAttribute="top" secondItem="64o-Zg-Pss" secondAttribute="bottom" constant="20" id="z8n-om-jRR"/>
@@ -248,6 +248,9 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="tapBackButton:" destination="Kcb-EZ-b9n" eventType="touchUpInside" id="6rO-48-0n0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -595,12 +598,14 @@
         <!--Item-->
         <scene sceneID="SYY-bg-vvy">
             <objects>
-                <navigationController id="9OA-Pq-eaj" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="9OA-Pq-eaj" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wwn-lO-hQa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dbn-Dt-1MJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="CnT-dx-cWz" kind="relationship" relationship="rootViewController" id="EO7-7f-rSb"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmW-nO-cT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -737,9 +742,81 @@
             </objects>
             <point key="canvasLocation" x="3257.971014492754" y="876.5625"/>
         </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="tZR-k6-Via">
+            <objects>
+                <viewController storyboardIdentifier="MyPageViewController" id="CnT-dx-cWz" customClass="MyPageViewController" customModule="bunjang_ios_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ai-wW-DDL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="600-vf-uid">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="d0A-eA-ufK">
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="Item" image="ellipsis" catalog="system" id="60b-UB-Mc1">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="square.and.arrow.up" catalog="system" id="G16-to-wWv">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                            <barButtonItem title="Item" image="bell" catalog="system" id="VCN-ll-VN3">
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RYe-aY-zjJ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UOn-fg-75h">
+                                    <size key="itemSize" width="414" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DOX-Dz-SaL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="x9H-wo-bUN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="128"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gig-V1-dmj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="600-vf-uid" firstAttribute="leading" secondItem="gig-V1-dmj" secondAttribute="leading" id="6a2-FG-WpR"/>
+                            <constraint firstItem="RYe-aY-zjJ" firstAttribute="leading" secondItem="gig-V1-dmj" secondAttribute="leading" id="D9L-Ij-PwX"/>
+                            <constraint firstItem="RYe-aY-zjJ" firstAttribute="top" secondItem="600-vf-uid" secondAttribute="bottom" id="IeD-vY-MNe"/>
+                            <constraint firstItem="600-vf-uid" firstAttribute="trailing" secondItem="gig-V1-dmj" secondAttribute="trailing" id="MAV-F3-0bn"/>
+                            <constraint firstItem="gig-V1-dmj" firstAttribute="bottom" secondItem="RYe-aY-zjJ" secondAttribute="bottom" id="P0Y-kp-UEq"/>
+                            <constraint firstItem="gig-V1-dmj" firstAttribute="trailing" secondItem="RYe-aY-zjJ" secondAttribute="trailing" id="iXg-Ne-CTR"/>
+                            <constraint firstItem="600-vf-uid" firstAttribute="top" secondItem="gig-V1-dmj" secondAttribute="top" id="wFg-C5-l9u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lbx-aR-kDA"/>
+                    <connections>
+                        <outlet property="collectionView" destination="RYe-aY-zjJ" id="Pd0-CB-fa6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EGr-NL-YmI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5616" y="877"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="네이버로그인" width="41.333332061767578" height="41.333332061767578"/>
@@ -751,7 +828,7 @@
             <color red="0.98000001907348633" green="0.88200002908706665" blue="0.87800002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="회색텍스트">
-            <color red="0.40000000596046448" green="0.3919999897480011" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.40000000000000002" green="0.39215686274509803" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -87,7 +87,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt8-2W-EcH">
-                                        <rect key="frame" x="40" y="172.5" width="59" height="21"/>
+                                        <rect key="frame" x="30" y="172.5" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
@@ -173,25 +173,25 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQS-OA-0yo">
-                                        <rect key="frame" x="204" y="172.5" width="59" height="21"/>
+                                        <rect key="frame" x="194" y="172.5" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYr-hY-diJ">
-                                        <rect key="frame" x="104" y="172" width="13" height="22"/>
+                                        <rect key="frame" x="94" y="172" width="13" height="22"/>
                                         <color key="tintColor" systemColor="systemGray3Color"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.forward" catalog="system"/>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sag-VW-Geh">
-                                        <rect key="frame" x="186" y="172" width="13" height="22"/>
+                                        <rect key="frame" x="176" y="172" width="13" height="22"/>
                                         <color key="tintColor" systemColor="systemGray3Color"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="chevron.forward" catalog="system"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgP-Fa-nyE">
-                                        <rect key="frame" x="122" y="172.5" width="59" height="21"/>
+                                        <rect key="frame" x="112" y="172.5" width="59" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGray3Color"/>
                                         <nil key="highlightedColor"/>
@@ -212,7 +212,7 @@
                                     <constraint firstItem="WWM-lU-kz1" firstAttribute="top" secondItem="0lh-P5-tma" secondAttribute="bottom" constant="15" id="ATb-Ia-JV8"/>
                                     <constraint firstItem="dkP-3Q-Nuh" firstAttribute="top" secondItem="3Ly-ak-qIY" secondAttribute="bottom" constant="10" id="BUO-wt-cwU"/>
                                     <constraint firstItem="hhO-u1-1KE" firstAttribute="leading" secondItem="TEb-bH-Xqk" secondAttribute="trailing" constant="15" id="FKh-nE-oCM"/>
-                                    <constraint firstItem="Tt8-2W-EcH" firstAttribute="leading" secondItem="OkV-Lb-tWt" secondAttribute="leading" constant="40" id="GCV-T2-InT"/>
+                                    <constraint firstItem="Tt8-2W-EcH" firstAttribute="leading" secondItem="OkV-Lb-tWt" secondAttribute="leading" constant="30" id="GCV-T2-InT"/>
                                     <constraint firstItem="cgP-Fa-nyE" firstAttribute="centerY" secondItem="3Ly-ak-qIY" secondAttribute="centerY" id="GuZ-9d-ETB"/>
                                     <constraint firstItem="AQS-OA-0yo" firstAttribute="centerY" secondItem="3Ly-ak-qIY" secondAttribute="centerY" id="H8n-l5-KsS"/>
                                     <constraint firstAttribute="trailing" secondItem="0lh-P5-tma" secondAttribute="trailing" constant="30" id="ICD-Ip-F7x"/>
@@ -594,7 +594,7 @@
         <image name="tag" width="20.333333969116211" height="20.333333969116211"/>
         <image name="상품등록기본이미지" width="67.666664123535156" height="67.666664123535156"/>
         <namedColor name="red1">
-            <color red="0.77647058823529413" green="0.17647058823529413" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77600002288818359" green="0.17599999904632568" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
