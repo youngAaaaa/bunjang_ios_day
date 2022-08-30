@@ -11,5 +11,6 @@ target 'bunjang_ios_day' do
   pod 'Tabman', '~> 2.11'
   pod 'Alamofire'
   pod 'FirebaseStorage'
+  pod 'Kingfisher', '~> 7.3.0'
 
 end

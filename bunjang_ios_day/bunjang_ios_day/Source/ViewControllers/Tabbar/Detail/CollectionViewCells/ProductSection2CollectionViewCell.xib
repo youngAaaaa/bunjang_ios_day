@@ -107,7 +107,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="제품배너" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-mR-7I2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="제품배너" translatesAutoresizingMaskIntoConstraints="NO" id="hJ1-mR-7I2">
                                 <rect key="frame" x="20" y="132" width="374" height="39.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3N7-wP-FFT" userLabel="라인">
@@ -239,7 +239,7 @@
         <image name="eye" catalog="system" width="128" height="81"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
-        <image name="제품배너" width="351.66665649414062" height="39.666667938232422"/>
+        <image name="제품배너" width="351.66665649414062" height="39.666667938232422"/>
         <namedColor name="연한회색">
             <color red="0.9649999737739563" green="0.9649999737739563" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

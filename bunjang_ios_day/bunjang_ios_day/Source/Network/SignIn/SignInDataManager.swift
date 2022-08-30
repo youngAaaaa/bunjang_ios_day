@@ -36,11 +36,11 @@ final class SignInDataManager {
                     // 토큰값 유저디폴트에 저장
                     UserDefaults.standard.set(response.result.jwt, forKey: "jwt")
                     UserDefaults.standard.set(response.result.storeId, forKey: "storeId")
-
+                    
                     Constant.isUserLogged = true
                     Constant.jwt = response.result.jwt
                     Constant.storeID = response.result.storeId
-
+                    
                     delegate.changeRootViewController(rootVC)
                 }
                 else{

@@ -35,7 +35,7 @@ final class RegistrationDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("상품 등록 성공")
-                    print("🔥response.result : \(response.result)")
+                    print("🔥response.result : \(response.result!)")
                     
                 }
                 else{
