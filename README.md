@@ -105,4 +105,39 @@
 
 </div>
 </details>
+<details>
+<summary>2022.08.28</summary>
+<div markdown="1">
+
+
+    
+    1. 게시물 등록 api ✅
+    2. 상품 세부 정보 화면 구현
+    
+
+</div>
+</details>
+<details>
+<summary>2022.08.29</summary>
+<div markdown="1">
+
+
+    
+    1. 마이페이지 화면 구현 중 ❤️‍🔥
+    
+
+</div>
+</details>
+<details>
+<summary>2022.08.30</summary>
+<div markdown="1">
+
+
+    
+    1. 마이페이지 화면 구현 ✅
+    2. 마이페이지 api(메인, 판매 중, 예약 중, 판매 완료)
+    
+
+</div>
+</details>
 
