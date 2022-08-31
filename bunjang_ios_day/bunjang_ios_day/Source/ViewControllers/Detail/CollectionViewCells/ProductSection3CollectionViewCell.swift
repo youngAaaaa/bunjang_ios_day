@@ -9,6 +9,8 @@ import UIKit
 
 class ProductSection3CollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var contentLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

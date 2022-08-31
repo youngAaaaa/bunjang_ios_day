@@ -12,5 +12,6 @@ target 'bunjang_ios_day' do
   pod 'Alamofire'
   pod 'FirebaseStorage'
   pod 'Kingfisher', '~> 7.3.0'
+  pod "ImageSlideshow/Kingfisher"
 
 end

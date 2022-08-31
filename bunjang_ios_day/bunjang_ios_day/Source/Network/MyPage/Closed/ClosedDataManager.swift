@@ -30,7 +30,7 @@ final class ClosedDataManager {
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
-                    print("🔥‼️예약중‼️response.result : \(response.result)")
+                    print("🔥‼️판매완료‼️response.result : \(response.result)")
                     delegate.closedDataList = response.result
                     
                     let count = response.result.count

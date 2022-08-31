@@ -132,10 +132,23 @@ class SellProductViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "PhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCollectionViewCell")
+        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didDismissGallaryNotification(_:)),
+            name: NSNotification.Name("DismissGallaryView"),
+            object: nil
+        )
+    }
+    
+    @objc func didDismissGallaryNotification(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
     
 }
-extension SellProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SellProductViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print(#function)
         return selectedImage.count
@@ -143,7 +156,13 @@ extension SellProductViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+        cell.imageView.image = selectedImage[indexPath.row]
+        cell.number.text = ""
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 70, height: 70)
     }
 }
 

@@ -15,6 +15,12 @@ class MyPageViewController: UIViewController {
     
     var myPageCount : CountResult?
     
+    @IBAction func tapSettingButton(_ sender: UIBarButtonItem) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

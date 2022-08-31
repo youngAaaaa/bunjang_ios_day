@@ -12,6 +12,9 @@ class ProductSection4CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var followButton: UIButton!
     @IBOutlet weak var reviewButton: UIButton!
     
+    @IBOutlet weak var idLabel: UILabel!
+    
+    @IBOutlet weak var profile: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

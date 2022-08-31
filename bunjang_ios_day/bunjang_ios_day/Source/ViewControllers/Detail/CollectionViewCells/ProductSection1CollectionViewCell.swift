@@ -7,20 +7,12 @@
 
 import UIKit
 import ImageSlideshow
+import Kingfisher
 
 class ProductSection1CollectionViewCell: UICollectionViewCell {
     
 
     @IBOutlet weak var productImage: ImageSlideshow!
-    let imageInputs = [
-        ImageSource(image: Image.banner1),
-        ImageSource(image: Image.banner2),
-        ImageSource(image: Image.banner3),
-        ImageSource(image: Image.banner4),
-        ImageSource(image: Image.banner5),
-        ImageSource(image: Image.banner6),
-        ImageSource(image: Image.banner7)
-    ]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +30,6 @@ class ProductSection1CollectionViewCell: UICollectionViewCell {
         pageIndicator.pageIndicatorTintColor = .clear
         productImage.pageIndicator = pageIndicator
         productImage.activityIndicator = DefaultActivityIndicator()
-        productImage.setImageInputs(imageInputs)
     }
 
 }

@@ -34,22 +34,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="B5m-z7-yIo" userLabel="주소">
-                                <rect key="frame" x="20" y="91.5" width="78" height="20.5"/>
+                                <rect key="frame" x="20" y="91.5" width="92.5" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf0-KS-kSK">
-                                        <rect key="frame" x="0.0" y="0.0" width="22.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역정보 없음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf0-KS-kSK">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ova-4J-LJD">
-                                        <rect key="frame" x="27.5" y="0.0" width="8" height="20.5"/>
+                                        <rect key="frame" x="76" y="0.0" width="8" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="며칠 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ek-bC-BIx">
-                                        <rect key="frame" x="40.5" y="0.0" width="37.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ek-bC-BIx">
+                                        <rect key="frame" x="89" y="0.0" width="3.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
@@ -227,10 +227,13 @@
             </constraints>
             <size key="customSize" width="414" height="267"/>
             <connections>
+                <outlet property="addressLabel" destination="Pf0-KS-kSK" id="5dg-2b-4xU"/>
                 <outlet property="deliveryView" destination="Ge7-bI-l9Q" id="GIi-SE-djn"/>
                 <outlet property="exchangeView" destination="Him-T6-ahx" id="6tO-ph-Eon"/>
                 <outlet property="numberView" destination="sAa-B8-3G3" id="FNT-5J-tv1"/>
+                <outlet property="priceLabel" destination="9zs-OG-jy2" id="y9P-xK-pq2"/>
                 <outlet property="stateView" destination="Nsn-Bb-upb" id="dg4-bb-Bcf"/>
+                <outlet property="titleLabel" destination="7x1-2G-oN9" id="N7P-Mw-1Ms"/>
             </connections>
             <point key="canvasLocation" x="371.01449275362324" y="120.87053571428571"/>
         </collectionViewCell>

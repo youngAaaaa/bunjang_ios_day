@@ -147,6 +147,8 @@
             <size key="customSize" width="421" height="235"/>
             <connections>
                 <outlet property="followButton" destination="Hel-N0-PJJ" id="RYx-H0-rd4"/>
+                <outlet property="idLabel" destination="rKt-Na-fr3" id="efX-HP-Pld"/>
+                <outlet property="profile" destination="lSN-dS-jdY" id="3WD-xU-aCB"/>
                 <outlet property="reviewButton" destination="6Gd-Wp-hiy" id="aWx-d3-9yM"/>
             </connections>
             <point key="canvasLocation" x="400.72463768115944" y="99.441964285714278"/>

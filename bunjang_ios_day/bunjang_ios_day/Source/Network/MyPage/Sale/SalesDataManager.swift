@@ -48,7 +48,6 @@ final class SalesDataManager {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-
         }
     }
 }

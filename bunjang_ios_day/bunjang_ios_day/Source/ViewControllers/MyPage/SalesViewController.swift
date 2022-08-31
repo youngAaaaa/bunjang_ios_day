@@ -8,7 +8,13 @@
 import UIKit
 import Kingfisher
 
-class SalesViewController: UIViewController {
+class SalesViewController: UIViewController, MyPageTableViewDelegate {
+    func tapMoreButton(tableIndex: Int) {
+        print("🚧click moreButton🚧")
+        print("tableIndex : \(tableIndex)")
+        let actionSheet = makeActionSheet(index: tableIndex, delegate: self)
+        present(actionSheet, animated: true)
+    }
     
     var salesDataList : [SalesResult] = []
     
@@ -55,14 +61,23 @@ extension SalesViewController: UITableViewDelegate, UITableViewDataSource {
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyPageTableViewCell", for: indexPath) as! MyPageTableViewCell
             cell.selectionStyle = .none
+            
             cell.priceLabel.text = "\(salesDataList[indexPath.row].price)"
             cell.titleLabel.text = "\(salesDataList[indexPath.row].title)"
+            
+            cell.index = indexPath.row
+            cell.delegate = self
             
             let imageURL = URL(string: salesDataList[indexPath.row].imageUrl01)
             cell.photoView.kf.setImage(with: imageURL)
             
             return cell
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productId = salesDataList[indexPath.row].productId
+        RegisteredProductDataManager().getProductData1(productID: productId, delegate: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -38,6 +38,9 @@ PODS:
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
+  - ImageSlideshow/Kingfisher (1.9.2):
+    - ImageSlideshow/Core
+    - Kingfisher (> 3.0)
   - Kingfisher (7.3.1)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
@@ -53,6 +56,7 @@ DEPENDENCIES:
   - Alamofire
   - FirebaseStorage
   - ImageSlideshow (~> 1.9.0)
+  - ImageSlideshow/Kingfisher
   - Kingfisher (~> 7.3.0)
   - Tabman (~> 2.11)
 
@@ -97,6 +101,6 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: bdcff74e7cd9775a32ff6e669f59edda43785099
+PODFILE CHECKSUM: 3a6b490895c2f04dc2cd8127ea9c86f62acab94a
 
 COCOAPODS: 1.11.3

@@ -46,4 +46,25 @@ extension UIViewController {
             self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
+    
+    func makeActionSheet(index: Int, delegate: SalesViewController) -> UIAlertController {
+        let productId = delegate.salesDataList[index].productId
+        
+        let actionSheet = UIAlertController(title: "일괄편집", message: "상품 상태를 수정합니다.", preferredStyle: UIAlertController.Style.actionSheet)
+        let delete = UIAlertAction(title: "삭제", style: .destructive) { action in
+            DeleteProductDataManager().deleteProduct(productID: productId, delegate: delegate)
+        }
+        
+        let save = UIAlertAction(title: "수정", style: .default) { action in
+            RegisteredProductDataManager().getProductData2(productID: productId, delegate: delegate)
+        }
+        
+        actionSheet.addAction(delete)
+        actionSheet.addAction(save)
+        
+        let cancle = UIAlertAction(title: "취소", style: .cancel)
+        actionSheet.addAction(cancle)
+        
+        return actionSheet
+    }
 }

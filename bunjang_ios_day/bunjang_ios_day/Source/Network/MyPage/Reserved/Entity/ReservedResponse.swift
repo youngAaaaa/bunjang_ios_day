@@ -17,6 +17,7 @@ struct ReservedResponse: Codable {
 
 // MARK: - Result
 struct ReservedResult: Codable {
+    let productId: Int
     let dealStatus, imageUrl01, title: String
     let price: Int
 }

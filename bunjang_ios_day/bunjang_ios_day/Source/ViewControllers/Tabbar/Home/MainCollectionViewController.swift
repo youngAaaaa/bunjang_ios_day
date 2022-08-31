@@ -108,7 +108,7 @@ extension MainCollectionViewController: UICollectionViewDelegate, UICollectionVi
         case 0:
             switch indexPath.row {
             case 0:
-                return CGSize(width: width, height: width * 0.72)
+                return CGSize(width: width, height: width * 0.8)
             case 1:
                 return CGSize(width: width, height: 162)
             case 2:

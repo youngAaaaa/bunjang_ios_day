@@ -81,6 +81,11 @@ class GallaryViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissGallaryView"), object: nil, userInfo: nil)
+    }
+    
     
     
     @IBAction func tapBackButton(_ sender: UIBarButtonItem) {

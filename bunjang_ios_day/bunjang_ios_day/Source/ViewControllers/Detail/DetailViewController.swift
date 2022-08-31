@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import Kingfisher
+import ImageSlideshow
 
 class DetailViewController: UIViewController {
     
+    var productData: ProductResult?
+    var imageInputs: [KingfisherSource] = []
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBAction func tapBackButton(_ sender: UIBarButtonItem) {
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.popViewController(animated: true)
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -51,12 +64,16 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
             switch indexPath.row {
             case 0:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSection1CollectionViewCell", for: indexPath) as! ProductSection1CollectionViewCell
+                cell.productImage.setImageInputs(imageInputs)
                 return cell
             case 1:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSection2CollectionViewCell", for: indexPath) as! ProductSection2CollectionViewCell
+                cell.priceLabel.text = "\(productData?.price ?? 0)"
+                cell.titleLabel.text = "\(productData?.name ?? "")"
                 return cell
             case 2:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSection3CollectionViewCell", for: indexPath) as! ProductSection3CollectionViewCell
+                cell.contentLabel.text = "\(productData?.content ?? "")"
                 return cell
             default:
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSection1CollectionViewCell", for: indexPath) as! ProductSection1CollectionViewCell

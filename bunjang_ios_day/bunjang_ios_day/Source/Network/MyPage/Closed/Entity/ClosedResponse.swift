@@ -17,6 +17,7 @@ struct ClosedResponse: Codable {
 
 // MARK: - Result
 struct ClosedResult: Codable {
+    let productId: Int
     let dealStatus: String
     let imageUrl01: String
     let title: String

@@ -14,6 +14,11 @@ class ProductSection2CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deliveryView: UIView!
     @IBOutlet weak var exchangeView: UIView!
     
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
