@@ -29,20 +29,9 @@ final class SignUpDataManager {
                 if response.isSuccess {
                     print("회원가입 성공")
                     print(response)
-                    //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    //let vc = storyboard.instantiateViewController(withIdentifier: "RootViewController")
-                    
-                    // 토큰값 유저디폴트에 저장
-                    //                    UserDefaults.standard.set(response.result?.loginId, forKey: "userID")
-                    //                    UserDefaults.standard.set(response.result?.jwt, forKey: "jwt")
-                    //
-                    //                    Constant.isUserLogged = true
-                    //                    Constant.jwt = response.result?.jwt
-                    //                    Constant.loginID = ConfirmLastViewController.receiveId
-                    //
-                    //                    print("로그인 아이디 : \(ConfirmLastViewController.receiveId!)")
-                    //
-                    //                    delegate.changeRootViewController(vc)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    guard let vc = storyboard.instantiateViewController(withIdentifier: "RootNavigationController") as? UINavigationController else { return }
+                    delegate.changeRootViewController(vc)
                 }
                 else{
                     switch response.code {

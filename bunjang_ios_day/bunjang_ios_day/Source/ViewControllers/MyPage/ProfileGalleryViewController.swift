@@ -1,29 +1,34 @@
 //
-//  GallaryViewController.swift
+//  ProfileGalleryViewController.swift
 //  bunjang_ios_day
 //
-//  Created by 안다영 on 2022/08/26.
+//  Created by 안다영 on 2022/09/01.
 //
 
 import UIKit
 import Photos
 
-protocol SelectedImagesDelegate: AnyObject {
-    func sendImages(images: [UIImage?], number: Int)
+protocol SelectedProfileDelegate: AnyObject {
+    func sendImages(images: UIImage)
 }
 
-class GallaryViewController: UIViewController {
+class ProfileGalleryViewController: UIViewController {
     
-    weak var delegate: SelectedImagesDelegate?
+    weak var delegate: SelectedProfileDelegate?
+    var uploadImage: UIImage?
     
-    // MARK: 사진
-    var tmpImg: UICollectionViewCell?
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBAction func tapBackButton(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func tapDoneButton(_ sender: UIButton) {
+        delegate?.sendImages(images: uploadImage!)
+        dismiss(animated: true)
+    }
+    
     var asset: PHFetchResult<PHAsset>
-    
-    var photosIndex = [Int](repeating: 0, count: 20)
-    var photos = [UIImage?](repeating: nil, count: 20)
-    var uploadImage = [UIImage]()
-    
     
     init() {
         let phFetchOptions = PHFetchOptions()
@@ -40,17 +45,12 @@ class GallaryViewController: UIViewController {
     let imageManager = PHCachingImageManager()
     
     
-    // MARK: 콜렉션 뷰
-    var num = 0
-    
-    @IBOutlet weak var collectionView: UICollectionView!
-    
     private let cellWidth = (UIScreen.main.bounds.width) / 3
-    private let kPhotoCell = "PhotoCollectionViewCell"
-    
+    private let kPhotoCell = "SmallPhotoCollectionViewCell"
+
     override func viewDidLoad() {
-        print(#function)
         super.viewDidLoad()
+        
         PHPhotoLibrary.shared().register(self)
         
         let layout = UICollectionViewFlowLayout()
@@ -69,37 +69,21 @@ class GallaryViewController: UIViewController {
         PHPhotoLibrary.shared().unregisterChangeObserver(self)
     }
     
-    @IBAction func tapDoneButton(_ sender: Any) {
-        
-        for i in photos {
-            if i != nil{
-                uploadImage.append(i!)
-            }
-        }
-        
-        delegate?.sendImages(images: uploadImage, number: num)
-        dismiss(animated: true)
-    }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.post(name: NSNotification.Name("DismissGallaryView"), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissProfileGallaryView"), object: nil, userInfo: nil)
     }
-    
-    
-    @IBAction func tapBackButton(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true)
-    }
-    
+
 }
-extension GallaryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension ProfileGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return asset.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPhotoCell, for: indexPath) as! PhotoCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPhotoCell, for: indexPath) as! SmallPhotoCollectionViewCell
         let asset = self.asset[indexPath.item]
         let scale: CGFloat = UIScreen.main.scale // 화질 향상
         cell.representedAssetIdentifier = asset.localIdentifier
@@ -112,28 +96,15 @@ extension GallaryViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCollectionViewCell
-        
-        if photosIndex[indexPath.row] == 1{
-            num -= 1
-            cell.number.text = ""
-            photos.remove(at: indexPath.row)
-            photosIndex[indexPath.row] = 0
-            print("\(indexPath.row) 삭제됨")
-            print(photos)
-        } else {
-            num += 1
-            cell.number.text = "\(num)"
-            photos.insert(cell.imageView.image!, at: indexPath.row)
-            photosIndex[indexPath.row] = 1
-            print("\(indexPath.row) 추가됨")
-            print(photos)
-        }
+        let cell = collectionView.cellForItem(at: indexPath) as! SmallPhotoCollectionViewCell
+        uploadImage = cell.imageView.image
+        delegate?.sendImages(images: uploadImage!)
+        dismiss(animated: true)
     }
     
 }
 
-extension GallaryViewController: PHPhotoLibraryChangeObserver {
+extension ProfileGalleryViewController: PHPhotoLibraryChangeObserver {
     func photoLibraryDidChange(_ changeInstance: PHChange) {
         guard let changes = changeInstance.changeDetails(for: self.asset) else {
             return

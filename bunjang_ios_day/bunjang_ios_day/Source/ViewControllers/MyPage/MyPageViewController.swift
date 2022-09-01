@@ -6,31 +6,47 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyPageViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pointView: UIView!
     @IBOutlet weak var bankAccountView: UIView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     var myPageCount : CountResult?
+    var storeData: DetailStoreResult?
     
-    @IBAction func tapSettingButton(_ sender: UIBarButtonItem) {
-        
+    @IBAction func tapSettingButton(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
-        
+
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func tapDetailStoreButton(_ sender: UIButton) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailStoreViewController") as! DetailStoreViewController
+        vc.receiveName = storeData?.storeName ?? ""
+        vc.receiveIntroduce = storeData?.introduce ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureView()
         setDatas()
+        configureView()
         setCollectionView()
     }
     
     private func configureView(){
+        
+        if storeData?.profileImgURL != nil {
+            let imageURL = URL(string: (storeData?.profileImgURL)!)
+            profileImage.kf.setImage(with: imageURL)
+        }
+        
         pointView.layer.cornerRadius = 10
         pointView.layer.borderColor = UIColor.lightGray.cgColor
         pointView.layer.borderWidth = 1
@@ -42,6 +58,7 @@ class MyPageViewController: UIViewController {
     
     private func setDatas(){
         MyPageCountDataManager().getMyPageCount(storeID: Constant.storeID!, delegate: self)
+        DetailStoreDataManager().getDetailStoreData(storeID: Constant.storeID!, delegate: self)
     }
     
     private func setCollectionView(){
@@ -65,6 +82,10 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         if indexPath.row == 0 {
             cell.label2.text = "신청"
+        }
+        else if indexPath.row == 1{
+            let star = storeData?.star
+            cell.label2.text = "\(star ?? 5)"
         }
         else if indexPath.row == 3{
             let follwer = myPageCount?.followerCount

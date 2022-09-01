@@ -17,13 +17,15 @@ class SalesViewController: UIViewController, MyPageTableViewDelegate {
     }
     
     var salesDataList : [SalesResult] = []
+    let refreshControl = UIRefreshControl()
     
     @IBOutlet weak var cntNumber: UILabel!
-    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //salesDataList.removeAll()
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -32,7 +34,16 @@ class SalesViewController: UIViewController, MyPageTableViewDelegate {
         tableView.register(UINib(nibName: "MyPageTableViewCell", bundle: nil), forCellReuseIdentifier: "MyPageTableViewCell")
         tableView.register(UINib(nibName: "EmptyMyPageTableViewCell", bundle: nil), forCellReuseIdentifier: "EmptyMyPageTableViewCell")
         
+        refreshControl.addTarget(self, action: #selector(refreshWork), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         setDatas()
+    }
+    
+    @objc func refreshWork() {
+        refreshControl.endRefreshing()
+        setDatas()
+        tableView.reloadData()
     }
     
     private func setDatas(){

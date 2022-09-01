@@ -9,6 +9,7 @@ import UIKit
 
 class MainCollectionViewController: UIViewController {
     
+    var page = 1
     
     @IBAction func tapBarButton(_ sender: UIBarButtonItem) {
         
@@ -26,6 +27,15 @@ class MainCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setData()
+        setCollectionView()
+    }
+    
+    private func setData(){
+        HomeFeedDataManager().getHomeFeedData(page: page, delegate: self)
+    }
+    
+    private func setCollectionView(){
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.contentInsetAdjustmentBehavior = .never

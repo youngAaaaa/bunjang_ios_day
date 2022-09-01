@@ -12,7 +12,7 @@ import ImageSlideshow
 final class RegisteredProductDataManager {
     
     func getProductData1(productID: Int, delegate: SalesViewController) {
-        let url = URLs.baseURL+URLs.detailURL+"\(productID)"
+        let url = URLs.baseURL+URLs.detailProductURL+"\(productID)"
         
         print("url : \(url)")
         
@@ -57,7 +57,7 @@ final class RegisteredProductDataManager {
     }
     
     func getProductData2(productID: Int, delegate: SalesViewController) {
-        let url = URLs.baseURL+URLs.detailURL+"\(productID)"
+        let url = URLs.baseURL+URLs.detailProductURL+"\(productID)"
         
         print("url : \(url)")
         
@@ -74,12 +74,19 @@ final class RegisteredProductDataManager {
             switch response.result {
             case .success(let response):
                 if response.isSuccess {
+                    print("💞상품 수정하기 : \(response.result)💞")
                     let storyboard = UIStoryboard(name: "Registeration", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "SellProductViewController") as! SellProductViewController
                     vc.modalPresentationStyle = .fullScreen
                     vc.tabBarController?.tabBar.isHidden = true
+                    vc.receiveName = response.result.name
+                    vc.receivePrice = "\(response.result.price)"
+                    vc.receiveContent = response.result.content
+                    vc.update = true
+                    vc.registeredImageNum = response.result.imageUrls.count
+                    vc.imageURLs = response.result.imageUrls
+                    vc.registeredProduct = response.result
                     
-                    //delegate.navigationController?.pushViewController(vc, animated: true)
                     delegate.present(vc, animated: true)
                 } else {
                     switch response.code {

@@ -13,14 +13,11 @@ class SettingViewController: UIViewController {
     
     @IBAction func tapBackButton(_ sender: UIButton) {
         self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.isHidden = true
         self.tabBarController?.tabBar.isHidden = true
         
         tableView.delegate = self

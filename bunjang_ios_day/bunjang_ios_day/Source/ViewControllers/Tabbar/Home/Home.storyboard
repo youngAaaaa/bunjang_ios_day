@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="igV-fr-4Qo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ce-7y-S2Z">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -10,27 +10,27 @@
     </dependencies>
     <scenes>
         <!--Main Collection View Controller-->
-        <scene sceneID="hZw-8T-u0J">
+        <scene sceneID="Snb-c7-4W1">
             <objects>
-                <viewController id="SFJ-da-CTa" customClass="MainCollectionViewController" customModule="bunjang_ios_day" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qxe-dL-TEw">
+                <viewController id="L9I-SB-n0F" customClass="MainCollectionViewController" customModule="bunjang_ios_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HMP-PZ-qWl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rOy-va-l2O">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d9O-rh-R8a">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PXr-nk-UiA">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lPK-f4-tQW">
                                     <size key="itemSize" width="414" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DFp-Qb-Uud">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HSP-8l-vYt">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="44k-WQ-F1u">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LbH-3r-FT1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
@@ -39,60 +39,63 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="bKV-yT-pNF"/>
+                        <viewLayoutGuide key="safeArea" id="HSL-eJ-a6v"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bKV-yT-pNF" firstAttribute="bottom" secondItem="rOy-va-l2O" secondAttribute="bottom" id="YQb-Nf-XsT"/>
-                            <constraint firstItem="rOy-va-l2O" firstAttribute="top" secondItem="Qxe-dL-TEw" secondAttribute="top" id="bt6-li-628"/>
-                            <constraint firstItem="bKV-yT-pNF" firstAttribute="trailing" secondItem="rOy-va-l2O" secondAttribute="trailing" id="er1-48-lbQ"/>
-                            <constraint firstItem="rOy-va-l2O" firstAttribute="leading" secondItem="bKV-yT-pNF" secondAttribute="leading" id="m0J-fM-UeK"/>
+                            <constraint firstItem="HSL-eJ-a6v" firstAttribute="trailing" secondItem="d9O-rh-R8a" secondAttribute="trailing" id="1Ke-sz-BhM"/>
+                            <constraint firstItem="d9O-rh-R8a" firstAttribute="leading" secondItem="HSL-eJ-a6v" secondAttribute="leading" id="Wmo-B2-hOO"/>
+                            <constraint firstItem="HSL-eJ-a6v" firstAttribute="bottom" secondItem="d9O-rh-R8a" secondAttribute="bottom" id="XWH-dY-llo"/>
+                            <constraint firstItem="d9O-rh-R8a" firstAttribute="top" secondItem="HMP-PZ-qWl" secondAttribute="top" id="j9u-Uh-klm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9Wc-36-KuU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="wpr-Y0-iUB">
+                    <navigationItem key="navigationItem" id="Yw5-22-1bz">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.3.horizontal" catalog="system" id="HI9-AG-ABY">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <action selector="tapBarButton:" destination="SFJ-da-CTa" id="WKZ-Ec-jAf"/>
+                                <action selector="tapBarButton:" destination="L9I-SB-n0F" id="qo3-MS-mKl"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem title="Item" image="bell" catalog="system" id="Ce1-rK-Z6u">
+                            <barButtonItem title="Item" image="bell" catalog="system" id="e2q-sU-aex">
                                 <color key="tintColor" systemColor="labelColor"/>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="iM2-my-MBE">
+                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="8Q0-YF-fiX">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="rOy-va-l2O" id="dtl-y0-STg"/>
+                        <outlet property="collectionView" destination="d9O-rh-R8a" id="rXf-1N-ZVv"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6rx-w2-ouk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ul-Sm-oef" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341" y="44"/>
+            <point key="canvasLocation" x="2667" y="224"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wUR-Nf-XeQ">
+        <!--홈-->
+        <scene sceneID="XLS-jE-T9U">
             <objects>
-                <navigationController id="igV-fr-4Qo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xiK-eq-gX8">
+                <navigationController id="9ce-7y-S2Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="홈" selectedImage="홈선택" id="weB-l6-2c5"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Tt-nw-m6X">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="SFJ-da-CTa" kind="relationship" relationship="rootViewController" id="6wK-kh-Fhe"/>
+                        <segue destination="L9I-SB-n0F" kind="relationship" relationship="rootViewController" id="cDf-wq-Ht4"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vr7-vf-dfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nrq-Gs-lk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-459" y="44"/>
+            <point key="canvasLocation" x="1867" y="224"/>
         </scene>
     </scenes>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="홈" width="22.666666030883789" height="22.666666030883789"/>
+        <image name="홈선택" width="20.666666030883789" height="22.333333969116211"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
