@@ -14,13 +14,15 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var pointView: UIView!
     @IBOutlet weak var bankAccountView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    
     
     var myPageCount : CountResult?
     var storeData: DetailStoreResult?
     
     @IBAction func tapSettingButton(_ sender: UIButton) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
-
+        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -31,7 +33,7 @@ class MyPageViewController: UIViewController {
         vc.receiveIntroduce = storeData?.introduce ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,10 @@ class MyPageViewController: UIViewController {
         if storeData?.profileImgURL != nil {
             let imageURL = URL(string: (storeData?.profileImgURL)!)
             profileImage.kf.setImage(with: imageURL)
+        }
+        
+        if storeData?.storeName != nil {
+            userName.text = storeData?.storeName
         }
         
         pointView.layer.cornerRadius = 10

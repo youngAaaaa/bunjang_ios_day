@@ -40,6 +40,7 @@
 		63356F1728C1090400AD2DD3 /* UpdateProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63356F1628C1090400AD2DD3 /* UpdateProductDataManager.swift */; };
 		63356F1B28C124C300AD2DD3 /* HomeFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63356F1A28C124C300AD2DD3 /* HomeFeedResponse.swift */; };
 		63356F1D28C1270400AD2DD3 /* HomeFeedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63356F1C28C1270400AD2DD3 /* HomeFeedDataManager.swift */; };
+		63356F2128C191B200AD2DD3 /* SettingAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63356F2028C191B200AD2DD3 /* SettingAddressViewController.swift */; };
 		633D32B128C0A82A0011238A /* ProfileGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D32AF28C0A82A0011238A /* ProfileGalleryViewController.swift */; };
 		633D32B228C0A82A0011238A /* ProfileGalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633D32B028C0A82A0011238A /* ProfileGalleryViewController.xib */; };
 		633D32B528C0AA600011238A /* SmallPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D32B328C0AA600011238A /* SmallPhotoCollectionViewCell.swift */; };
@@ -47,6 +48,8 @@
 		633D32BA28C0B46B0011238A /* UpdateStoreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D32B928C0B46B0011238A /* UpdateStoreResponse.swift */; };
 		633D32BC28C0B4760011238A /* UpdateStoreRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D32BB28C0B4760011238A /* UpdateStoreRequest.swift */; };
 		633D32BE28C0B5590011238A /* UpdateStoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633D32BD28C0B5590011238A /* UpdateStoreDataManager.swift */; };
+		633FD31728C195CC00B3F919 /* SettingPayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FD31628C195CC00B3F919 /* SettingPayViewController.swift */; };
+		633FD31928C1977A00B3F919 /* SettingBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FD31828C1977A00B3F919 /* SettingBlockViewController.swift */; };
 		634135A928B8D02B00970C64 /* GallaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634135A728B8D02B00970C64 /* GallaryViewController.swift */; };
 		634135AA28B8D02B00970C64 /* GallaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 634135A828B8D02B00970C64 /* GallaryViewController.xib */; };
 		634135AE28B92CEC00970C64 /* RegistrationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634135AD28B92CEC00970C64 /* RegistrationRequest.swift */; };
@@ -168,6 +171,7 @@
 		63356F1628C1090400AD2DD3 /* UpdateProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProductDataManager.swift; sourceTree = "<group>"; };
 		63356F1A28C124C300AD2DD3 /* HomeFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedResponse.swift; sourceTree = "<group>"; };
 		63356F1C28C1270400AD2DD3 /* HomeFeedDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedDataManager.swift; sourceTree = "<group>"; };
+		63356F2028C191B200AD2DD3 /* SettingAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAddressViewController.swift; sourceTree = "<group>"; };
 		633D32AF28C0A82A0011238A /* ProfileGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGalleryViewController.swift; sourceTree = "<group>"; };
 		633D32B028C0A82A0011238A /* ProfileGalleryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileGalleryViewController.xib; sourceTree = "<group>"; };
 		633D32B328C0AA600011238A /* SmallPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 		633D32B928C0B46B0011238A /* UpdateStoreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStoreResponse.swift; sourceTree = "<group>"; };
 		633D32BB28C0B4760011238A /* UpdateStoreRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStoreRequest.swift; sourceTree = "<group>"; };
 		633D32BD28C0B5590011238A /* UpdateStoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStoreDataManager.swift; sourceTree = "<group>"; };
+		633FD31628C195CC00B3F919 /* SettingPayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPayViewController.swift; sourceTree = "<group>"; };
+		633FD31828C1977A00B3F919 /* SettingBlockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBlockViewController.swift; sourceTree = "<group>"; };
 		634135A728B8D02B00970C64 /* GallaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallaryViewController.swift; sourceTree = "<group>"; };
 		634135A828B8D02B00970C64 /* GallaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GallaryViewController.xib; sourceTree = "<group>"; };
 		634135AD28B92CEC00970C64 /* RegistrationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequest.swift; sourceTree = "<group>"; };
@@ -583,6 +589,9 @@
 				639287B828BF3BC200CC19A3 /* SettingViewController.swift */,
 				639287CA28BFC2EE00CC19A3 /* AccountSettingsViewController.swift */,
 				639287BF28BF5E2800CC19A3 /* Section2ViewController.swift */,
+				63356F2028C191B200AD2DD3 /* SettingAddressViewController.swift */,
+				633FD31628C195CC00B3F919 /* SettingPayViewController.swift */,
+				633FD31828C1977A00B3F919 /* SettingBlockViewController.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1071,6 +1080,7 @@
 				63B7910228B5F21300C76A1A /* HalfModalPresentationController.swift in Sources */,
 				639287B628BF2ED400CC19A3 /* RegisteredProductDataManager.swift in Sources */,
 				63A3BEFF28B4CC0D0055244C /* ServiceViewController.swift in Sources */,
+				633FD31728C195CC00B3F919 /* SettingPayViewController.swift in Sources */,
 				63A3BEF628B4CB830055244C /* AllMenusViewController.swift in Sources */,
 				63356F1128C0D80100AD2DD3 /* RootViewController.swift in Sources */,
 				6361DBF828B8B703005BEB5C /* PhotoCollectionViewCell.swift in Sources */,
@@ -1083,6 +1093,7 @@
 				634135AE28B92CEC00970C64 /* RegistrationRequest.swift in Sources */,
 				63DD320528B79584001266C9 /* SellProductViewController.swift in Sources */,
 				633D32BA28C0B46B0011238A /* UpdateStoreResponse.swift in Sources */,
+				63356F2128C191B200AD2DD3 /* SettingAddressViewController.swift in Sources */,
 				63B5B82228BDCC8000B3B33E /* ReservedViewController.swift in Sources */,
 				63DD320B28B795EB001266C9 /* Category2ViewController.swift in Sources */,
 				634135B028B92D5D00970C64 /* RegistrationResponse.swift in Sources */,
@@ -1111,6 +1122,7 @@
 				63B5399A28B13B9700D8FF4A /* SignUpViewController.swift in Sources */,
 				63DD322128B7A682001266C9 /* Category2Response.swift in Sources */,
 				6314202928B51D0E00F2D62A /* Section1CollectionViewCell.swift in Sources */,
+				633FD31928C1977A00B3F919 /* SettingBlockViewController.swift in Sources */,
 				633D32B128C0A82A0011238A /* ProfileGalleryViewController.swift in Sources */,
 				639287C828BFB8CE00CC19A3 /* DeleteProductDataManager.swift in Sources */,
 				63356F1D28C1270400AD2DD3 /* HomeFeedDataManager.swift in Sources */,

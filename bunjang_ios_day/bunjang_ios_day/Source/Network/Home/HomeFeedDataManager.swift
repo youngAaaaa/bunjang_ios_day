@@ -31,6 +31,9 @@ final class HomeFeedDataManager {
             case .success(let response):
                 if response.isSuccess {
                     print("🔥‼️홈 피드 정보‼️response.result : \(response.result)🔥")
+                    delegate.feedData = response.result
+                    print("🔥‼️홈 피드 정보‼️delegate.feedData : \(delegate.feedData)🔥")
+                    delegate.collectionView.reloadData()
                 }
                 else {
                     switch response.code {

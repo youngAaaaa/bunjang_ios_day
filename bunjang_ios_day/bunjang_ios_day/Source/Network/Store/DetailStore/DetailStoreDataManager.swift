@@ -41,6 +41,8 @@ final class DetailStoreDataManager {
                         delegate.profileImage.image = UIImage(named: "기본프로필")
                     }
                     
+                    delegate.userName.text = response.result.storeName
+                    
                 } else {
                     switch response.code {
                     case 2001: print("JWT를 입력해주세요.")

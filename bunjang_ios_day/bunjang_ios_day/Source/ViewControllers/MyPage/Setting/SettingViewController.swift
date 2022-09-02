@@ -83,6 +83,24 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             case 0 :
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AccountSettingsViewController") as? AccountSettingsViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
+            case 3 :
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingAddressViewController") as? SettingAddressViewController else { return }
+                vc.receiveButton = "주소 추가"
+                vc.receiveMainLabel = "주소 관리"
+                vc.receiveLabel = "주소를 추가해주세요"
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 4 :
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingAddressViewController") as? SettingAddressViewController else { return }
+                vc.receiveButton = "계좌 추가"
+                vc.receiveMainLabel = "계좌 관리"
+                vc.receiveLabel = "계좌를 추가해주세요"
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 5 :
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingPayViewController") as? SettingPayViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            case 6 :
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingBlockViewController") as? SettingBlockViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
             default:
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AccountSettingsViewController") as? AccountSettingsViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)

@@ -12,7 +12,7 @@ struct HomeFeedResponse: Codable {
     let isSuccess: Bool
     let code: Int
     let message: String
-    let result: [HomeFeedResult]
+    var result: [HomeFeedResult]
 }
 
 // MARK: - Result
@@ -21,7 +21,7 @@ struct HomeFeedResult: Codable {
     let name: String
     let imageURL: String
     let price: Int
-    let location, uploaded: String
+    let location, uploaded: String?
     let uploadedEasyText: String
     let dibs: Int
     let dealStatus: String

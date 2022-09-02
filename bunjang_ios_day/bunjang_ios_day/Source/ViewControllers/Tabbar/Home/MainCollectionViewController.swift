@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainCollectionViewController: UIViewController {
     
     var page = 1
+    var feedData: [HomeFeedResult] = []
     
     @IBAction func tapBarButton(_ sender: UIBarButtonItem) {
         
@@ -55,7 +57,7 @@ extension MainCollectionViewController: UICollectionViewDelegate, UICollectionVi
             return 4
             
         case 1:
-            return 20
+            return feedData.count
             
         default:
             return 5
@@ -88,18 +90,26 @@ extension MainCollectionViewController: UICollectionViewDelegate, UICollectionVi
                 return cell
             }
         case 1:
-            switch indexPath.row {
-            case 0:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-                return cell
-            default:
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
-                return cell
-            }
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+            
+            let imageURL = URL(string: feedData[indexPath.row].imageURL)
+            cell.productImage.kf.setImage(with: imageURL)
+            cell.priceLabel.text = "\(feedData[indexPath.row].price)"
+            cell.titleLabel.text = feedData[indexPath.row].name
+            cell.locationLabel.text = feedData[indexPath.row].location
+            cell.timeLabel.text = feedData[indexPath.row].uploadedEasyText
+            cell.dibsLabel.text = "\(feedData[indexPath.row].dibs)"
+            
+            return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Section1CollectionViewCell", for: indexPath) as! Section1CollectionViewCell
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("indexPath.section: \(indexPath.section), indexPath.row : \(indexPath.row)")
+        RegisteredProductDataManager().getProductData3(productID: feedData[indexPath.row].productID, delegate: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -135,6 +145,18 @@ extension MainCollectionViewController: UICollectionViewDelegate, UICollectionVi
             return size
         default:
             return CGSize(width: width / 2, height: 80)
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let offset = scrollView.contentOffset.y
+        if offset < 0 {
+            page = 1
+            setData()
+        } else if self.collectionView.contentOffset.y >
+                    collectionView.contentSize.height - collectionView.bounds.size.height {
+            page += 1
+            setData()
         }
     }
 }

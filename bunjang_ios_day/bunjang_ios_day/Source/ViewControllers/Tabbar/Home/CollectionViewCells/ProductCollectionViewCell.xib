@@ -113,7 +113,12 @@
             </constraints>
             <size key="customSize" width="190" height="350"/>
             <connections>
+                <outlet property="dibsLabel" destination="vS1-DK-pNM" id="Up1-gf-2Z7"/>
+                <outlet property="locationLabel" destination="AAE-Zy-sg8" id="nG6-iy-UXg"/>
+                <outlet property="priceLabel" destination="lX3-0B-qjc" id="RKB-GF-lpc"/>
                 <outlet property="productImage" destination="ff1-YV-vhK" id="Ysr-ol-Rnr"/>
+                <outlet property="timeLabel" destination="xUJ-D8-vlG" id="Mjt-4Z-Oc8"/>
+                <outlet property="titleLabel" destination="owd-G7-ZwE" id="bhw-ZD-3FL"/>
             </connections>
             <point key="canvasLocation" x="240.57971014492756" y="127.90178571428571"/>
         </collectionViewCell>

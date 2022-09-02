@@ -153,15 +153,15 @@ class SellProductViewController: UIViewController {
                     //수정
                     let end = selectedImageNum! + registeredImageNum!
                     if imageURLs.count == end {
-                        let request = UpdateProductRequest(productID: registeredProduct!.productID,
-                                                           storeID: registeredProduct!.storeID,
+                        let request = UpdateProductRequest(productID: registeredProduct!.storeID,
+                                                           storeID: registeredProduct!.productID,
                                                            name: nameTF.text!,
                                                            content: textView.text!,
                                                            imageUrls: imageURLs,
                                                            tags: ["여성의류"]
                                                            )
                                                            //price: Int(priceTF.text!)!)
-                        UpdateProductDataManager().patchProduct(request, productId: registeredProduct!.productID, delegate: self)
+                        UpdateProductDataManager().patchProduct(request, productId: registeredProduct!.storeID, delegate: self)
                     }
                 }
             }
