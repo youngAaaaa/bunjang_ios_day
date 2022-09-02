@@ -88,7 +88,7 @@
     
     1. 상품등록 화면 구현 ✅
     2. 사진 선택 화면 구현 ✅
-    3. 사진 저장을 위한 firebase 연동 중 ❤️‍🔥
+    3. 사진 저장을 위한 firebase 연동 중 🔥
     
 
 </div>
@@ -100,7 +100,7 @@
 
     
     1. 사진 저장을 위한 firebase 연동 ✅
-    2. 게시물 등록 api ❤️‍🔥
+    2. 게시물 등록 api 🔥
     
 
 </div>
@@ -123,7 +123,7 @@
 
 
     
-    1. 마이페이지 화면 구현 중 ❤️‍🔥
+    1. 마이페이지 화면 구현 중 🔥
     
 
 </div>
@@ -136,6 +136,43 @@
     
     1. 마이페이지 화면 구현 ✅
     2. 마이페이지 api(메인, 판매 중, 예약 중, 판매 완료)
+    
+
+</div>
+</details>
+<details>
+<summary>2022.08.31</summary>
+<div markdown="1">
+
+
+    
+    1. 검색, 번개톡, 마이페이지 - 설정 화면 구현 ✅
+    2. 상품 상세 정보 불러오기 api, 상품 삭제 api ✅
+    
+
+</div>
+</details>
+<details>
+<summary>2022.09.01</summary>
+<div markdown="1">
+
+
+    
+    1. 상점 수정 화면 구현, 상품 등록 view present로 구현 ✅
+    2. 상점 정보 api, 상점 수정 api ✅
+    3. & 상품 수정 api, 홈 피드 api 하는 중 🔥
+    
+
+</div>
+</details>
+<details>
+<summary>2022.09.02</summary>
+<div markdown="1">
+
+
+    
+    1. 설정 세부 화면 구현 ✅
+    2. 홈 api, 상품 수정 api 완료 ✅
     
 
 </div>
