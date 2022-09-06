@@ -119,12 +119,15 @@
 </div>
 </details>
 <details>
-<summary>2022.08.29</summary>
+<summary>2022.08.29 2차 피드백</summary>
 <div markdown="1">
 
 
     
     1. 마이페이지 화면 구현 중 🔥
+    
+    * 피드백 : 1. 정량 평가(화면, api 등)를 위해서 쉽게 구현 가능한 화면으로 화면 개수를 확보해놓자
+             2. 탭바에서 화면 present로 띄우기(shouldSelect)
     
 
 </div>
