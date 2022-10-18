@@ -204,9 +204,22 @@ https://user-images.githubusercontent.com/97266875/196350679-e9265f0f-0642-4491-
 ### - 탭 바 페이지 화면
 https://user-images.githubusercontent.com/97266875/196354241-0b1d7793-6dc1-4426-bb38-dd459f07741b.mp4
 
-### - 판매 등록 화면
+<br>
+
+### - 판매 글 등록 화면
 https://user-images.githubusercontent.com/97266875/196355883-7b363893-f58a-4bb4-9924-295febb31d69.mp4
 
-### - 게시글 수정 화면
+<br>
+
+### - 판매 글 수정 화면
 https://user-images.githubusercontent.com/97266875/196356814-703da1db-84f0-460d-8482-997cffeefa8a.mp4
 
+#### * 수정 후
+| 마이페이지 | 홈 화면 |
+| ---- | --- |
+| <img width="250" src="https://user-images.githubusercontent.com/97266875/196368654-09012d61-284b-4875-8452-482f3eba6de7.gif"> | <img width="250" src="https://user-images.githubusercontent.com/97266875/196369683-5461bc65-ec2b-4214-9e92-084df14e0635.gif"> |
+
+<br>
+
+### - 판매 글 삭제 화면
+<img width="250" src="https://user-images.githubusercontent.com/97266875/196371922-958eaf6e-b4a8-4af9-9cfb-ccb3c958e7f6.gif">
