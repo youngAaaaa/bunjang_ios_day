@@ -182,3 +182,31 @@
 </div>
 </details>
 
+## 📌 기능 상세 화면
+### - 회원가입
+https://user-images.githubusercontent.com/97266875/196350339-cfed3d1d-173a-449a-a4c8-61fa24d343e0.mp4
+
+<br>
+
+### - 로그인
+https://user-images.githubusercontent.com/97266875/196350679-e9265f0f-0642-4491-a5fd-e028d5ea2685.mp4
+
+<br>
+
+### - 홈 화면
+<div>
+<img width="250" src="https://user-images.githubusercontent.com/97266875/196352987-a1b6bca6-7909-44bc-86a0-1e5778bca0ba.gif">
+<img width="250" src="https://user-images.githubusercontent.com/97266875/196351619-830d3f83-bbfb-4d7c-a7d8-5e126bc85ba0.gif">
+</div>
+
+<br>
+
+### - 탭 바 페이지 화면
+https://user-images.githubusercontent.com/97266875/196354241-0b1d7793-6dc1-4426-bb38-dd459f07741b.mp4
+
+### - 판매 등록 화면
+https://user-images.githubusercontent.com/97266875/196355883-7b363893-f58a-4bb4-9924-295febb31d69.mp4
+
+### - 게시글 수정 화면
+https://user-images.githubusercontent.com/97266875/196356814-703da1db-84f0-460d-8482-997cffeefa8a.mp4
+
